@@ -1,0 +1,294 @@
+body {
+    margin: auto;
+    font-family: Helvetica, sans-serif;
+    font-size: 13px;
+    background-color: black;
+    background-image: url(./assets/starry_sky.jpg);
+    color: rgb(43, 43, 43);
+}
+
+/*common*/
+.contentWrapper {
+    margin: 0 auto;
+    /*max-width: 1170px;*/
+    padding: 0 5em;
+}
+
+h1 {
+    font-size: 40px;
+    margin-top: 10px;
+    margin-bottom: 0px;
+    text-shadow: 1px 1px 2px gray;
+}
+
+h2 {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    text-shadow: 1px 1px 1px gray;
+    text-align: center;
+}
+
+/*header*/
+header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 100%;
+    background-color: black;
+    background-image: url(./assets/starry_sky.jpg);
+    z-index: 2;
+    box-shadow: 0 0 15px gray;
+}
+
+.cart {
+    float: right;
+    margin-right: 10%;
+    padding: 0.35em;
+    background-color: rgba(64,54,47,0.8);
+    width: 500px;
+    font-size: 10px;
+    color: white;
+}
+
+.cart th {
+    margin-left: 20px;
+}
+
+.cart:hover {
+    outline: 6px dotted white;
+    box-shadow: 0 0 15px 8px rgba(187, 161, 95, 0.8);
+}
+
+.social {
+    float: right;
+}
+
+.social-item {
+    margin-top: 20px;
+    width: 3em;
+    height: 3em;
+    margin-right: 1em;
+}
+
+.cinema-lights {
+    outline: 6px dotted white;
+    box-shadow: 0 0 10px 8px rgba(185, 150, 59, 0.6);
+    background-image: linear-gradient(135deg, rgb(135,45,44), rgb(187,49,47), rgb(135,45,44));
+    border-radius: 2px;
+}
+
+.ticket-button {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: white;
+    padding: 0.2em 30px 0.2em;
+    font-size: 28px;
+    font-weight: bold;
+    text-decoration: none;
+    text-transform: uppercase;
+    display: inline-block;
+    margin-left: 0.2em;
+    color: rgb(135,45,44);
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.ticket-button:hover {
+    border: 1px solid rgb(160, 131, 0);
+    color: black;
+}
+
+#logo {
+    float: left;
+    width: 240px;
+    height: 200px;
+}
+
+/*nav*/
+nav li {
+    display: inline-block;
+}
+
+.site-nav {
+    position: absolute;
+    white-space:nowrap;
+    left: 150px;
+    float: left;
+    margin-top: 120px;
+    text-align: left;
+}
+
+.site-nav ul{
+    margin-left: 0px;
+}
+
+.site-nav li {
+    padding: 0.2em;
+    margin: 0.7em 1.5em 0.7em 1.5em;
+    text-transform: uppercase;
+}
+
+.site-nav a, .site-nav a:visited {
+    color: white;
+    font-size: 25px;
+    font-weight: bolder;
+    text-decoration: none;
+    -webkit-text-stroke: 1px black;
+}
+
+.site-nav a:hover {
+    color: rgb(255, 255, 188);
+}
+
+.site-nav li:hover {
+    outline: 6px dotted white;
+    box-shadow: 0 0 15px 8px rgba(187, 161, 95, 0.8);
+}
+
+/*main*/
+
+.content {
+    display: flex;
+    width: 100%;
+    background-image: linear-gradient(180deg, skyblue 25%, rgb(255, 202, 29) 50%, rgb(202, 44, 70) 80%, rgb(92, 36, 69) 87%, rgb(0, 0, 0) 97%);
+    /*background-image: linear-gradient(180deg, rgb(167, 167, 167), white);*/
+}
+
+#main {
+    float: left;
+    margin-top: 200px;
+    width: 75%;
+    z-index: 1;
+}
+
+.screen{ 
+    width: 80%;
+    min-height: 480px;
+    text-align: center;
+    padding: 0em 1em 2em 1em;
+    background-color: white;
+    border: black solid 1px;
+    border-radius: 0.6em;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.poster {
+    min-height: 400px;
+    width: auto;
+    height: auto;
+}
+
+.movie-info {
+    padding: 0px 1em 1em 1em;
+    text-align: left;
+}
+
+.movie-info a, .movie-info a:visited{
+    text-align: left;
+    color: white;
+    text-decoration: none;
+}
+
+.movie-table {
+    margin-top: 1em;
+    text-align: left;
+}
+
+.movie-table th{
+    width: 40%;
+}
+
+.flip-card {
+    margin: 0em 2em 0em 2em;
+    display: inline-block;
+    background-color: transparent;
+    width: 40%;
+    height: 400px;
+    perspective: 1000px; 
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.8s;
+    transform-style: preserve-3d;
+}
+
+.flip-card:hover .flip-card-inner {
+    transform: rotateY(180deg);
+}
+
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    border: 1px solid black;
+    border-radius: 10px;
+    background-image: linear-gradient(135deg, rgb(135,45,44), rgb(187,49,47), rgb(135,45,44));
+    color: white;
+}
+
+.flip-card-front {
+    color: black;
+    
+}
+
+.flip-card-back {
+    color: white;
+    transform: rotateY(180deg);
+}
+
+.flip-card-back h2{
+    margin-top: 1em;
+}
+
+/*sidebar*/
+.sidebar {
+    float: right;
+    width: 25%;
+    margin-top: 200px;
+    background: url(./assets/popcorn.png) fixed;
+    z-index: 1;
+    box-shadow: 0 -15px 15px gray;
+}
+
+.side-panel {
+    /*position: fixed;
+    width: 18%;*/
+    background-color: white;
+    border-radius: 10px;
+    margin: 20px 50px 50px 50px;
+    padding: .1em 1em 1em 1em;
+    box-shadow: 5px 5px 5px 0 rgba(0, 0, 0, 0.3);
+}
+
+.side-panel h3 {
+    text-align: center;
+}
+
+/*footer*/
+footer {
+    width: 100%;
+}
+
+.legal-misc {
+    text-align: center;
+    color: white;
+}
+
+.legal-misc li {
+    display: inline-block;
+    margin: 0.5em;
+}
+
+.legal-misc a, .legal-misc a:visited {
+    color: white;
+    text-decoration: none;
+}
